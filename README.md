@@ -56,6 +56,8 @@ curl -O [https://raw.githubusercontent.com/debinkl2/chatui/main/docker-compose.p
 ```bash
 podman-compose -f docker-compose.prod.yml up -d
 ```
+*That's it! Open [http://localhost:3000](http://localhost:3000) to start chatting.*
+
 Local Networking Note: The host.docker.internal configuration used in this stack to connect to local Ollama models is natively understood and supported by Podman's networking bridge.
 
 ---
