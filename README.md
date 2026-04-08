@@ -34,7 +34,7 @@ You can run this entire application locally without downloading the source code 
 curl -O https://raw.githubusercontent.com/debojyotidas/ChatUI/main/docker-compose.prod.yml
 ` ` `
 
-** 2. Boot the app:**
+**2. Boot the app:**
 ` ` `bash
 docker compose -f docker-compose.prod.yml up -d
 ` ` `
@@ -52,7 +52,7 @@ If you prefer to use Podman commands explicitly, you can deploy the stack using 
 ```bash
 curl -O [https://raw.githubusercontent.com/debinkl2/chatui/main/docker-compose.prod.yml
 ```
-**2. Ignite the stack:
+**2. Ignite the stack:**
 ```bash
 podman-compose -f docker-compose.prod.yml up -d
 ```
