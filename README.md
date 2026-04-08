@@ -30,14 +30,14 @@ A premium, polished AI chat interface that routes seamlessly between local Ollam
 You can run this entire application locally without downloading the source code or installing Node/Python. Just ensure [Docker Desktop](https://docs.docker.com/get-docker/) is running.
 
 **1. Download the production config:**
-` ` `bash
+```bash
 curl -O https://raw.githubusercontent.com/debojyotidas/ChatUI/main/docker-compose.prod.yml
-` ` `
+```
 
 **2. Boot the app:**
-` ` `bash
+```bash
 docker compose -f docker-compose.prod.yml up -d
-` ` `
+```
 
 *That's it! Open [http://localhost:3000](http://localhost:3000) to start chatting.*
 
