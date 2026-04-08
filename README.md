@@ -42,6 +42,23 @@ docker compose -f docker-compose.prod.yml up -d
 *That's it! Open [http://localhost:3000](http://localhost:3000) to start chatting.*
 
 ---
+### 🦭 Podman Support (For Enterprise & Linux Users)
+
+ChatUI is 100% OCI-compliant and runs flawlessly on **Podman** as a daemonless, secure drop-in replacement for Docker. 
+
+If you prefer to use Podman commands explicitly, you can deploy the stack using `podman-compose`:
+
+**1. Download the configuration:**
+```bash
+curl -O [https://raw.githubusercontent.com/debinkl2/chatui/main/docker-compose.prod.yml
+```
+**2. Ignite the stack:
+```bash
+podman-compose -f docker-compose.prod.yml up -d
+```
+Local Networking Note: The host.docker.internal configuration used in this stack to connect to local Ollama models is natively understood and supported by Podman's networking bridge.
+
+---
 
 ### For Developers (Build from source)
 If you want to modify the code:
