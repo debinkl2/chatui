@@ -70,7 +70,8 @@ Provider name: Nvdia
 Base URL: https://integrate.api.nvidia.com/v1
 API Key: (Paste your actual Anthropic API key here)
 Model name: mistralai/mistral-small-4-119b-2603
-` ` `
+
+```
 
 
 ---
