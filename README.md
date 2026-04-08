@@ -34,7 +34,7 @@ You can run this entire application locally without downloading the source code 
 curl -O https://raw.githubusercontent.com/debojyotidas/ChatUI/main/docker-compose.prod.yml
 ` ` `
 
-**2. Boot the app:**
+** 2. Boot the app:**
 ` ` `bash
 docker compose -f docker-compose.prod.yml up -d
 ` ` `
