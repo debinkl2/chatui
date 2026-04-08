@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    image: debojyotidas/chatui-backend:latest
+    container_name: chatui-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - chatui_data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    image: debojyotidas/chatui-frontend:latest
+    container_name: chatui-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_INTERNAL_URL=http://backend:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  chatui_data:

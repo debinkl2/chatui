@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  # ── FastAPI Backend ────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: chatui-backend
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      - db-data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/chatui.db
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      - MCP_SERVER_URLS=${MCP_SERVER_URLS:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── Next.js Frontend ───────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_APP_AUTHOR=${NEXT_PUBLIC_APP_AUTHOR:-Debojyoti Das}
+        - NEXT_PUBLIC_BACKEND_URL=http://backend:8000
+        - BACKEND_INTERNAL_URL=http://backend:8000
+    container_name: chatui-frontend
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    environment:
+      - NEXT_PUBLIC_APP_AUTHOR=${NEXT_PUBLIC_APP_AUTHOR:-Debojyoti Das}
+      - NEXT_PUBLIC_BACKEND_URL=http://backend:8000
+      - BACKEND_INTERNAL_URL=http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  db-data:
+    driver: local
