@@ -50,7 +50,7 @@ If you prefer to use Podman commands explicitly, you can deploy the stack using 
 
 **1. Download the configuration:**
 ```bash
-curl -O [https://raw.githubusercontent.com/debinkl2/chatui/main/docker-compose.prod.yml
+curl -O https://raw.githubusercontent.com/debojyotidas/ChatUI/main/docker-compose.prod.yml
 ```
 **2. Ignite the stack:**
 ```bash
