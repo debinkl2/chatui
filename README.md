@@ -67,7 +67,7 @@ If you want to modify the code:
 1. Clone the repo: `git clone https://github.com/debojyotidas/ChatUI.git`
 2. Build and launch: `docker compose up -d --build`
 
-### 4. Add models
+### Add models
 
 **Ollama models** — If Ollama is running on your host, click the sync (↻) button next to the model selector. This calls `POST /v1/models/sync/ollama` and auto-registers all pulled models.
 
