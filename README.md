@@ -1,6 +1,6 @@
 # ChatUI — Local-to-Cloud AI Gateway
 
-A premium, polished AI chat interface that routes seamlessly between local Ollama models and cloud APIs (OpenAI, Anthropic, Gemini) via a unified gateway. Runs entirely via Docker.
+A premium, polished AI chat interface that routes seamlessly between local Ollama models and cloud APIs (OpenAI, Anthropic, Gemini..) via a unified gateway. Runs entirely via Docker.
 
 ![Stack](https://img.shields.io/badge/Next.js-15-black) ![Stack](https://img.shields.io/badge/FastAPI-0.115-009688) ![Stack](https://img.shields.io/badge/LiteLLM-1.55-blue) ![Stack](https://img.shields.io/badge/SQLite-3-003B57)
 
