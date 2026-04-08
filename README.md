@@ -55,18 +55,21 @@ If you want to modify the code:
 **Cloud models** — Use the Settings panel (⚙) to configure API keys, then add models via the API:
 
 ```bash
-curl -X POST http://localhost:8000/v1/models \
-  -H "Content-Type: application/json" \
-  -d '{"model_id": "gpt-4o", "display_name": "GPT-4o", "provider_name": "openai"}'
+Provider name: OpenRouter
+Base URL: https://openrouter.ai/api/v1
+API Key: (Paste your actual Anthropic API key here)
+Model name: google/gemma-4-31b-it
 
-curl -X POST http://localhost:8000/v1/models \
-  -H "Content-Type: application/json" \
-  -d '{"model_id": "claude-3-5-sonnet-20241022", "display_name": "Claude 3.5 Sonnet", "provider_name": "anthropic"}'
+Provider name: Anthropic
+Base URL: https://api.anthropic.com/v1
+API Key: (Paste your actual Anthropic API key here)
+Model name: claude-sonnet-4-6
+Version: 2023-06-01
 
-curl -X POST http://localhost:8000/v1/models \
-  -H "Content-Type: application/json" \
-  -d '{"model_id": "gemini/gemini-1.5-pro", "display_name": "Gemini 1.5 Pro", "provider_name": "gemini"}'
-```
+Provider name: Nvdia
+Base URL: https://integrate.api.nvidia.com/v1
+API Key: (Paste your actual Anthropic API key here)
+Model name: mistralai/mistral-small-4-119b-2603
 
 ---
 
