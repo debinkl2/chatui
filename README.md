@@ -180,30 +180,6 @@ ChatUI/
 
 ---
 
-## API Reference
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `POST` | `/v1/chat/completions` | Streaming chat (SSE) with MCP tool loop |
-| `POST` | `/v1/arena/completions` | Arena dual-model stream (NDJSON) |
-| `GET` | `/v1/models` | List enabled models |
-| `POST` | `/v1/models` | Register a model |
-| `DELETE` | `/v1/models/:id` | Delete a model |
-| `POST` | `/v1/models/sync/ollama` | Auto-discover Ollama models |
-| `GET` | `/v1/providers` | List providers (keys redacted) |
-| `PATCH` | `/v1/providers/:id` | Update API key / toggle |
-| `GET` | `/v1/conversations` | List conversations |
-| `GET` | `/v1/conversations/search` | Search conversations by title |
-| `POST` | `/v1/conversations` | Create conversation |
-| `PATCH` | `/v1/conversations/:id` | Rename conversation |
-| `DELETE` | `/v1/conversations/:id` | Delete conversation |
-| `GET` | `/v1/conversations/:id/messages` | Get messages |
-| `POST` | `/v1/upload` | Upload file for RAG |
-| `GET/POST/DELETE` | `/v1/mcp/servers` | MCP server management |
-| `GET` | `/health` | Health check |
-
----
-
 ## License
 
 Debojyoti Das
