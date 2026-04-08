@@ -202,26 +202,6 @@ ChatUI/
 
 ---
 
-## Development
-
-Run outside Docker for hot-reload:
-
-```bash
-# Backend
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-
-# Frontend (separate terminal)
-cd frontend
-npm install
-npm run dev
-```
-
-Set `BACKEND_INTERNAL_URL=http://localhost:8000` in `frontend/.env.local`.
-
----
-
 ## License
 
-MIT
+Debojyoti Das
