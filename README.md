@@ -25,6 +25,12 @@ A premium, polished AI chat interface that routes seamlessly between local Ollam
 
 ---
 
+## Screenshot
+
+![Chat UI Screenshot](https://raw.githubusercontent.com/debinkl2/chatui/main/screenshot.jpg)
+
+---
+
 ## Quick Start (Zero-Build Install)
 
 You can run this entire application locally without downloading the source code or installing Node/Python. Just ensure [Docker Desktop](https://docs.docker.com/get-docker/) is running.
